@@ -1,0 +1,20 @@
+
+.luz_traduccion_download {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10rem;
+}
+
+#lightnes:hover, #img_ingles:hover,.navegacion_p:hover, #img_curriculum:hover{
+    cursor: pointer;
+    transition: transform 0.2s;
+    transform: scale(1.1);
+}
+
+#lightnes, #img_ingles, #img_curriculum{
+    max-width: 5rem;
+    margin: 2rem;
+    margin-bottom: 0;
+    transform: scale(1.0);
+    transition: transform 0.5s;  
+}

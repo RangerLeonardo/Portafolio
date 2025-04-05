@@ -1,0 +1,33 @@
+/* Section footer start */
+.footer_principal{
+    background-color: var(--negro-secundario);
+    width: 100%;
+}
+  
+.div_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.div_parrafo{
+    margin-left: 42%;
+    font-weight: bold;
+    font-size: 2rem;
+}
+  
+.img_footer{
+    max-width: 5rem;
+    margin-right: 2rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    transform: scale(1.0);
+    transition: transform 0.5s;
+}
+  
+.img_footer:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 0.3s;
+}
+  /* Section footer end */

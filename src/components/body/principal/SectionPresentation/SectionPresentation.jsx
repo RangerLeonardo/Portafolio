@@ -1,0 +1,32 @@
+export const SectionPresentation = () => {
+    return ( 
+        <section className="section_contenido_principal">
+            <div className="div_contenido_principal">
+                <div className="myName">
+                    <h1>ADATA<br/>BARRERA<br/>LEONARDO</h1>
+                </div>
+                <div className="div_info">
+                    <div>
+                        <div className="div_generico">
+                            <div>
+                                <h2 className="info_title">Desarrollador WEB</h2>
+                            </div>
+                            <div>
+                                <hr className="linea_generica_principal"/>
+                            </div>
+                        </div>
+                        <div className="info_p">
+                            <div className="info_subtitle">
+                                <p>Viviendo en Michoacán, México. <br/> Desarrollador full stack.</p>
+                            </div>
+                            <div className="info_desc">
+                                <p>"El hombre no puede obtener nada sin <br/> primero dar algo a cambio..."</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
+}

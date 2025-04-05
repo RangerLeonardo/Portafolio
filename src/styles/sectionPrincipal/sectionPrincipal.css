@@ -1,0 +1,30 @@
+.section_contenido_principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .div_contenido_principal{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 99%;
+    margin-top: 10rem;
+  }
+  
+  .myName{
+    z-index: 1;
+    margin-left: 6rem;
+  }
+  
+  .imageContainer {
+    position: relative;
+    left: -25rem;
+    bottom: -12.5rem;
+    z-index: 2; 
+  }
+  
+  .img_yo{
+    width: 75rem;
+    object-fit: cover;
+  }

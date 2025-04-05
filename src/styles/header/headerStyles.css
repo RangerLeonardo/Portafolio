@@ -1,0 +1,48 @@
+/* Header start */
+.navegacion_principal{
+    display: flex;
+    margin-left: 5rem;
+    margin-top: 1.6rem;
+}
+
+.navegacion_div{
+flex-grow: 1;
+align-items: center;
+justify-content: center;
+margin: 2rem;
+}
+
+.navegacion_p{
+font-size: 2.5rem;
+display: inline;
+transition: color 0.5s ease-in-out;
+color: var(--blanco-primario);
+}
+
+.navegacion_div p:hover{
+color:var(--naranja-primario);
+transition: color 0.3s ease;
+}
+
+#logo{
+max-width: 5rem;
+margin-top: -.5rem;  
+transition: transform 0.2s;
+transform: scale(1.0);
+}
+
+#logo:hover{
+cursor: pointer;
+transition: transform 0.2s;
+transform: scale(1.1);
+}
+
+.navegacion_p, .presentacion_titulo, .locacion{
+font-weight: bold;
+}
+.presentacion_titulo{
+color: var(--naranja-primario);
+font-size: 1.8rem;
+}
+
+/* header end */
