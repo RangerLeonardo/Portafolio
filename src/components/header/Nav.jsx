@@ -5,8 +5,7 @@ export const Nav = () => {
     <nav>
       <section className="navegacion_principal">
         <div className="navegacion_div">
-          <img id="logo" src="/src/media/images/imagesWeb/logo/Logo.webp" alt="logo" 
-          onError={(e) => {e.target.src = '/src/media/images/imagesPng/logo/Logo.png';}} />
+          <img className='animation_scale' id="logo" src="/Portafolio/img/logo/Logo.webp" alt="logo" />
         </div>
         <NavLink href="#smoothInicio" id="inicio">Inicio</NavLink>
         <NavLink href="#smoothSobreMi" id="sobre_mi">Sobre mí</NavLink>

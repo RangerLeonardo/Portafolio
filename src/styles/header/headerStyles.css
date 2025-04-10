@@ -3,6 +3,7 @@
     display: flex;
     margin-left: 5rem;
     margin-top: 1.6rem;
+    margin-bottom: 2rem;
 }
 
 .navegacion_div{
@@ -13,7 +14,7 @@ margin: 2rem;
 }
 
 .navegacion_p{
-font-size: 2.5rem;
+font-size: 3.5rem;
 display: inline;
 transition: color 0.5s ease-in-out;
 color: var(--blanco-primario);
@@ -25,16 +26,8 @@ transition: color 0.3s ease;
 }
 
 #logo{
-max-width: 5rem;
+max-width: 6.5rem;
 margin-top: -.5rem;  
-transition: transform 0.2s;
-transform: scale(1.0);
-}
-
-#logo:hover{
-cursor: pointer;
-transition: transform 0.2s;
-transform: scale(1.1);
 }
 
 .navegacion_p, .presentacion_titulo, .locacion{

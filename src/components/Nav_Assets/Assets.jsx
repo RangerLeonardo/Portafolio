@@ -1,6 +1,7 @@
 import { DownloadCV } from "./DownloadCV";
 import { LanguageToggle } from "./LanguageToggle";
 import { LightModeToggle } from "./LightModeToggle";
+import "../../styles/assets/assets.css"
 
 export const Assets = () => {
     return (  

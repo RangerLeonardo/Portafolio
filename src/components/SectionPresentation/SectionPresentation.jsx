@@ -2,16 +2,22 @@ export const SectionPresentation = () => {
     return ( 
         <section className="section_contenido_principal">
             <div className="div_contenido_principal">
+
                 <div className="myName">
                     <h1>ADATA<br/>BARRERA<br/>LEONARDO</h1>
                 </div>
-                <div className="div_info">
-                    <div>
+
+                <div className="div_mi_foto">
+                    <img className="img_mi_foto" src="/Portafolio/img/MiFoto/Inouske.png" alt="Foto de como me veo" />
+                </div>
+
+                <div className="div_info_principal">
+                    <div className="div_info">
                         <div className="div_generico">
                             <div>
                                 <h2 className="info_title">Desarrollador WEB</h2>
                             </div>
-                            <div>
+                            <div className="div_linea_generica">
                                 <hr className="linea_generica_principal"/>
                             </div>
                         </div>
@@ -26,6 +32,7 @@ export const SectionPresentation = () => {
                         
                     </div>
                 </div>
+
             </div>
         </section>
     );

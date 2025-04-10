@@ -1,16 +1,17 @@
-import { Header } from "./components/header/Header.jsx";
-import { Footer } from "./components/footer/Footer.jsx";
-import { SectionPrincipal } from "./components/body/principal/SectionPrincipal.jsx";
+import { Header } from "./components/Header/Header";
+import { Footer } from "./components/Footer/Footer";
+import { SectionPrincipal } from "./components/SectionPrincipal/SectionPrincipal";
+import { SectionSobreMi } from "./components/SectionSobreMi/SectionSobreMi";
 
 function App() {
 
   return (
-    <div>
+    <>
       <Header />
       <SectionPrincipal />
-
+      <SectionSobreMi />
       <Footer />
-    </div>
+    </>
   )
 }
 

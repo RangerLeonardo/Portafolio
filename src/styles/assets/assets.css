@@ -1,20 +1,72 @@
-
 .luz_traduccion_download {
     display: flex;
     justify-content: flex-end;
     margin-right: 10rem;
 }
 
-#lightnes:hover, #img_ingles:hover,.navegacion_p:hover, #img_curriculum:hover{
-    cursor: pointer;
-    transition: transform 0.2s;
-    transform: scale(1.1);
-}
-
-#lightnes, #img_ingles, #img_curriculum{
+.img_assets{
     max-width: 5rem;
     margin: 2rem;
     margin-bottom: 0;
-    transform: scale(1.0);
-    transition: transform 0.5s;  
+}
+
+.div_container_cv_download{
+    position: relative;
+    margin-right: 10rem;
+    cursor: pointer;
+    perspective: 1000px;
+}
+
+.div_container_cv_download img{
+    position: absolute;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#img_curriculum_nav{
+    opacity: 1;
+}
+
+#img_download_nav{
+    opacity: 0 ;
+}
+
+.div_container_cv_download:hover #img_curriculum_nav{
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateX(180deg);
+    animation: flip-horizontal-bottom 0.5s ease-in-out forwards;
+}
+
+.div_container_cv_download:hover #img_download_nav{
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    transform: rotateX(180deg);
+    animation: flip-horizontal-bottom 0.5s ease-in-out forwards;
+}
+
+/* Animation for the reverse effect when not hovering */
+.div_container_cv_download:not(:hover) #img_download_nav {
+    opacity: 0;
+    transform: rotateX(0);
+    animation: flip-horizontal-bottom-reverse 0.5s ease-in-out forwards;
+}
+
+.div_container_cv_download:not(:hover) #img_curriculum_nav {
+    opacity: 1;
+    transform: rotateX(0);
+    animation: flip-horizontal-bottom-reverse 0.5s ease-in-out forwards;
+}
+/* Animation for the reverse effect when not hovering */
+
+@keyframes flip-horizontal-bottom-reverse {
+    0% { transform: rotateX(-180deg); }
+    100% { transform: rotateX(0); }
+}
+
+@-webkit-keyframes flip-horizontal-bottom{
+    0%{-webkit-transform:rotateX(0);transform:rotateX(0)}
+    100%{-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg)}}
+@keyframes flip-horizontal-bottom{
+    0%{-webkit-transform:rotateX(0);transform:rotateX(0)}
+    100%{-webkit-transform:rotateX(-180deg);transform:rotateX(-180deg)}
 }

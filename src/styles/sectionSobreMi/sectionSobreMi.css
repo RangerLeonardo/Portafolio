@@ -1,0 +1,49 @@
+.section_sobre_mi{
+    height: 80vh;
+}
+
+.div_mis_hobbies{
+    margin-top: 3rem;
+}
+
+.div_sobre_mi{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.div_lineas_genericas{
+    justify-content: center;
+}
+
+.div_sobre_mi_texto{
+    padding: 1rem;
+    margin-left: 2rem;
+}
+
+.div_sobre_mi_texto p{
+    font-size: 2.5rem;
+}
+
+.div_hobbies_img img{
+    border-radius: 100%;
+    margin: 3rem 0;
+    max-height: 40rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.div_hobbies_img{
+    width: 100%;
+    text-align: center;
+}
+
+.flip-animation {
+    transform: rotateX(180deg); /* Aplica el giro */
+}
+
+.triangulo_up,.triangulo_down{
+    margin: 0 auto;
+}
+
+.invert_image {
+    filter: invert(100%);
+}

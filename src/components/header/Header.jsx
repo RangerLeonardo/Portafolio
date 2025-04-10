@@ -1,4 +1,5 @@
-import { Nav } from "./Nav";
+import { Nav } from "./Nav.jsx";
+import "../../styles/header/headerStyles.css"
 
 export const Header = () => {
 
