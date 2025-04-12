@@ -1,21 +1,21 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Footer } from "./components/Footer/Footer";
 import { SectionPrincipal } from "./components/SectionPrincipal/SectionPrincipal";
-import { SectionSobreMi } from "./components/SectionSobreMi/SectionSobreMi";
-import SectionProyecto from "./components/SectionProyecto/SectionProyecto";
-import SectionContactame from "./components/SectionContactame/SectionContactame";
+import SectionContactoExitoso from "./components/SectionContactoExitoso/SectionContactoExitoso";
+
 
 function App() {
 
   return (
-    <>
+    <Router>
       <Header />
-      <SectionPrincipal />
-      <SectionSobreMi />
-      <SectionProyecto />
-      <SectionContactame />
+      <Routes>
+        <Route path="/Portafolio" element={<SectionPrincipal />} />
+        <Route path="/Portafolio/formulario_enviado" element={<SectionContactoExitoso />} />
+      </Routes>
       <Footer />
-    </>
+    </Router>
   )
 }
 

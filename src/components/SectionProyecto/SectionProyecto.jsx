@@ -1,6 +1,5 @@
 import React from 'react'
 import '../../styles/sectionProyecto/sectionProyecto.css'
-import { Double_bar_title_orange } from '../Assets/Double_bar_title_orange'
 import SectionDefault from '../CustomSection/SectionDefault'
 
 export const SectionProyecto = () => {

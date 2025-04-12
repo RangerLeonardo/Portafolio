@@ -1,5 +1,6 @@
 import {React, useState} from 'react'
 import '../../styles/sectionContactame/formularioContactame.css'
+import { NavLink } from 'react-router-dom';
 
 export const FormularioContactame = () => {
     const [formData, setFormData] = useState({
@@ -105,7 +106,9 @@ export const FormularioContactame = () => {
                 </div>
 
                 <div className="div_btn">
-                    <button type="submit" className="btn_enviar_formulario">ENVIAR</button>
+                    <NavLink to={"/Portafolio/formulario_enviado"}>
+                        <button type="submit" className="btn_enviar_formulario">ENVIAR</button>
+                    </NavLink>
                 </div>
 
             </fieldset>

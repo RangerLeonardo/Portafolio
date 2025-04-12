@@ -1,3 +1,6 @@
+#smooth_contactame{
+    padding: 1rem;
+}
 .form_principal {
     background-color: var(--negro-primario); /* Fondo negro */
     padding: 2rem;
@@ -20,7 +23,7 @@
 
 .form_label {
     color: var(--blanco-primario);
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     margin-bottom: .5rem;
 }
 
@@ -31,7 +34,7 @@
     border-radius: 5px;
     background-color: var(--negro-secundario);
     color: var(--blanco-primario);
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .div_text_area{
@@ -49,7 +52,7 @@ textarea {
     color: var(--negro-primario);
     border: none;
     border-radius: 5px;
-    font-size: 2rem;
+    font-size: 1.8rem;
     cursor: pointer;
     font-weight: bold;
 }
