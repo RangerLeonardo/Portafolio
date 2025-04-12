@@ -10,13 +10,13 @@ export const Footer = () => {
             </div>
 
             <div className="div_img_footer">
-                <a href="https://www.linkedin.com/in/brandon-leonardo-adata-barrera">
+                <a target="_blank" href="https://www.linkedin.com/in/brandon-leonardo-adata-barrera">
                     <img className="animation_scale img_footer" src="/Portafolio/img/footer/linkedin_1.webp" alt="Linkedin de Brandon"/>
                 </a>
-                <a href="https://github.com/rangerLeonardo">
+                <a target="_blank" href="https://github.com/rangerLeonardo">
                     <img className="animation_scale img_footer" src="/Portafolio/img/footer/github-gris_1.webp" alt="Github de Brandon"/>
                 </a>
-                <a href="mailto:brandonleonardobarrera@gmail.com">
+                <a target="_blank" href="mailto:brandonleonardobarrera@gmail.com">
                     <img className="animation_scale img_footer" src="/Portafolio/img/footer/gmail.webp" alt="Email de Brandon"/>
                 </a>
             </div>

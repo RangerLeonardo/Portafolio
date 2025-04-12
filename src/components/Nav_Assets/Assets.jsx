@@ -4,11 +4,13 @@ import { LightModeToggle } from "./LightModeToggle";
 import "../../styles/assets/assets.css"
 
 export const Assets = () => {
-    return (  
-    <div className="luz_traduccion_download">
-        <LightModeToggle />
-        <LanguageToggle />
-        <DownloadCV />
-    </div>
+    return (
+        <div id="smooth_inicio_logo"> 
+            <div className="luz_traduccion_download" id="smooth_inicio">
+                <LightModeToggle />
+                <LanguageToggle />
+                <DownloadCV />
+            </div>
+        </div>
     );
 }

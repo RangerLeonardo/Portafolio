@@ -1,5 +1,6 @@
 .section_sobre_mi{
-    height: 80vh;
+    height: 90vh;
+    background-color: var(--negro-secundario);
 }
 
 .div_mis_hobbies{
@@ -17,7 +18,10 @@
 
 .div_sobre_mi_texto{
     padding: 1rem;
-    margin-left: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .div_sobre_mi_texto p{
@@ -25,15 +29,34 @@
 }
 
 .div_hobbies_img img{
-    border-radius: 100%;
-    margin: 3rem 0;
-    max-height: 40rem;
+    width: 80%;
+    height: 80%;
+    object-fit: cover; /* Ajusta la imagen dentro del borde sin deformarla */
     transition: transform 0.5s ease-in-out;
 }
+
+
+.div_hobbies_img_border{
+    display: flex; /* Centra la imagen dentro */
+    align-items: center;
+    justify-content: center;
+    border: 0.5rem solid #fff;
+    border-radius: 100%;
+    width: 45rem; /* Ajusta a un tamaño fijo */
+    height: 45rem; /* Mantiene la proporción circular */
+    overflow: hidden; /* Evita que la imagen sobresalga */
+}
+
 
 .div_hobbies_img{
     width: 100%;
     text-align: center;
+}
+
+.div_hobbies_center{
+    display: flex;
+    justify-content: center;
+    margin: 2.5rem auto;
 }
 
 .flip-animation {
@@ -47,3 +70,4 @@
 .invert_image {
     filter: invert(100%);
 }
+

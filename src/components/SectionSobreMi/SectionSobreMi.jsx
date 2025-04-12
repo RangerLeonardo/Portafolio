@@ -1,14 +1,16 @@
 import React from 'react'
 import { useState } from 'react'
 import '../../styles/sectionSobreMi/sectionSobreMi.css'
+import Double_bar_title_orange from '../Assets/double_bar_title_orange';
 
 export const SectionSobreMi = () => {
     const images = [
-        "/Portafolio/img/assets/lightness.png",
-        "/Portafolio/img/assets/Español.png",
-        "/Portafolio/img/hobbies/dumbblles.png",
-        "/Portafolio/img/hobbies/weights.png",
-        "/Portafolio/img/hobbies/weight.png",
+        "/Portafolio/img/hobbies/gym.png",
+        "/Portafolio/img/hobbies/meditation.png",
+        "/Portafolio/img/hobbies/leer.png",
+        "/Portafolio/img/hobbies/games.png",
+        "/Portafolio/img/hobbies/reirme.png",
+        "/Portafolio/img/hobbies/programacion.png",
 
 
     ];
@@ -32,50 +34,39 @@ export const SectionSobreMi = () => {
         }, 300);
     };
     return (
-        <section className='section_sobre_mi'>
+        <section className='section_sobre_mi' id='smooth_sobre_mi'>
             <div className="div_sobre_mi">
-                <div className="div_generico div_lineas_genericas">
-                    <div className="div_lineas_generica">
-                            <hr className="linea_generica_principal"/>
-                    </div>
+                <Double_bar_title_orange title="Sobre mí" >
+                    {/** SOBRE MI */}
+                </Double_bar_title_orange>
 
-                    <div>
-                        <h2 className="info_title">Sobre mí</h2>
-                    </div>
-
-                    <div className="div_lineas_generica">
-                        <hr className="linea_generica_principal"/>
-                    </div>
-                </div>
-
-                <div className="div_generico div_lineas_genericas">
-                    <div className="div_lineas_generica">
-                        <hr className="linea_generica_principal"/>
-                    </div>
-                    <div>
-                        <h2 className="info_title">Hobbies</h2>
-                    </div>
-                    <div className="div_lineas_generica">
-                        <hr className="linea_generica_principal"/>
-                    </div>
-                </div>
+                <Double_bar_title_orange title="Hobbies" >
+                    {/** HOBBIES */}
+                </Double_bar_title_orange>
 
                 
                 <div className='div_sobre_mi_texto'>
-                    <h4>"El maestro se ha equivocado más veces de lo que el estudiante lo ha intentado."</h4>
-                    <p>Soy un desarrollador web apasionado por crear experiencias digitales funcionales y atractivas.
-                        Me especializo en transformar ideas en proyectos sólidos mediante tecnologías modernas.
-                        <br />
-                        <br />
-                        Mi enfoque se centra en la eficiencia, el diseño intuitivo y la optimización del rendimiento. 
-                        Tengo experiencia en tecnologías como Java, Spring framework, React JS y CSS avanzado para desarrollar interfaces dinámicas.
-                    </p>
+                    <div className='div_sobre_mi_texto_info'>
+                        <h4>"El maestro se ha equivocado más veces de lo que el estudiante lo ha intentado."</h4>
+                        <p>Soy un desarrollador web apasionado por crear experiencias digitales funcionales y atractivas.
+                            Me especializo en transformar ideas en proyectos sólidos mediante tecnologías modernas.
+                            <br />
+                            <br />
+                            Mi enfoque se centra en la eficiencia, el diseño intuitivo y la optimización del rendimiento. 
+                            Tengo experiencia en tecnologías como Java, Spring framework, React JS y CSS avanzado para desarrollar interfaces dinámicas.
+                        </p>
+                    </div>
                 </div>
                 <div className='div_mis_hobbies'>
+                    
                     <div className='triangulo_up animation_scale' onClick={handlePrevious}>{/* IZQUIERDO */}</div>
 
                     <div className='div_hobbies_img'>
-                        <img src={images[currentIndex]} alt="Hobby" className={`invert_image ${isFlipping ? 'flip-animation' : ''}`}/>
+                        <div className='div_hobbies_center'>
+                            <div className='div_hobbies_img_border'>
+                                <img src={images[currentIndex]} alt="Hobby" className={`invert_image ${isFlipping ? 'flip-animation' : ''}`}/>
+                            </div>
+                        </div>
                     </div>
 
                     <div className='triangulo_down animation_scale' onClick={handleNext}>{/* DERECHO */}</div>

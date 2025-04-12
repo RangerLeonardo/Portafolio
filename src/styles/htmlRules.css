@@ -3,11 +3,13 @@ html {
   font-size: 62.5%;
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
+  scroll-padding-top: 15rem;
 }*, *:before, *:after {
   box-sizing: inherit;
 }
 :root {
-  --naranja-primario: #F16B4E;
+  --naranja-primario: #f35c3a;
   --negro-primario: #1e1e1e;
   --negro-secundario: #222222;
   --blanco-primario: #FFF;
@@ -26,10 +28,6 @@ body{
 
 main{
   min-height: 83vh;
-}
-
-header{
-  height: auto;
 }
 
 textarea {
@@ -104,6 +102,23 @@ body.light-mode {
   border-bottom: 3.5rem solid var(--naranja-primario);
   border-right:2.5rem solid transparent;
   border-left:2.5rem solid transparent;
+}
+
+header{
+  position: sticky;
+  top: 0; /* Se pegará en la parte superior */
+  z-index: 1000; /* Asegura que esté sobre otros elementos */
+  background-color: var(--negro-primario); /* Ajusta el color */
+  padding: 1rem;
+}
+
+.section_default{
+  height: 83vh;
+}
+
+.section_default_secondary{
+  height: 83vh;
+  background-color: var(--negro-secundario);
 }
 
 
