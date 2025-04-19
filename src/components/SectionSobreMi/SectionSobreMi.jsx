@@ -1,9 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import { useState } from 'react'
 import '../../styles/sectionSobreMi/sectionSobreMi.css'
-import Double_bar_title_orange from '../Assets/double_bar_title_orange';
+import Double_bar_title_orange from '../Assets/Double_bar_title_orange';
+import { DarkOrLightContext } from "../context/DarkOrLightMode";
+
 
 export const SectionSobreMi = () => {
+    const { toggleTheme, isLightMode } = useContext(DarkOrLightContext);
+
     const images = [
         "/Portafolio/img/hobbies/gym.png",
         "/Portafolio/img/hobbies/meditation.png",
@@ -11,12 +15,11 @@ export const SectionSobreMi = () => {
         "/Portafolio/img/hobbies/games.png",
         "/Portafolio/img/hobbies/reirme.png",
         "/Portafolio/img/hobbies/programacion.png",
-
-
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [isFlipping, setIsFlipping] = useState(false); // Estado para la animación
+    const [isFlipping, setIsFlipping] = useState(false);
+    const notInvertImage = isLightMode ? "" : "invert_image";
 
     const handlePrevious = () => {
         setIsFlipping(true);
@@ -64,7 +67,7 @@ export const SectionSobreMi = () => {
                     <div className='div_hobbies_img'>
                         <div className='div_hobbies_center'>
                             <div className='div_hobbies_img_border'>
-                                <img src={images[currentIndex]} alt="Hobby" className={`invert_image ${isFlipping ? 'flip-animation' : ''}`}/>
+                                <img src={images[currentIndex]} alt="Hobby" className={`${notInvertImage} ${isFlipping ? 'flip-animation' : ''}`}/>
                             </div>
                         </div>
                     </div>

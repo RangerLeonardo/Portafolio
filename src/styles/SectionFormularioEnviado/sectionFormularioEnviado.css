@@ -1,0 +1,32 @@
+.section_default_secondary_formulario_enviado{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.div_formulario_enviado{
+    text-align: center;
+}
+
+.div_formulario_enviado h2{
+    font-size: 5rem;
+    margin: 1rem;
+}
+
+.div_container_formulario_enviado_img{
+    display: flex;
+    justify-content: center;
+}
+
+.div_container_formulario_enviado_img img{
+    max-width: 10rem;
+}
+
+.div_formulario_enviado_img{
+    margin: 3rem;
+}
+
+.div_formulario_enviado_img:hover{
+    cursor: pointer;
+}

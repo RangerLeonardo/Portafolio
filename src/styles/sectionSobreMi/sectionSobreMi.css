@@ -1,5 +1,5 @@
 .section_sobre_mi{
-    height: 90vh;
+    height: 100vh;
     background-color: var(--negro-secundario);
 }
 
@@ -40,7 +40,7 @@
     display: flex; /* Centra la imagen dentro */
     align-items: center;
     justify-content: center;
-    border: 0.5rem solid #fff;
+    border: 0.5rem solid var(--blanco-primario);
     border-radius: 100%;
     width: 45rem; /* Ajusta a un tamaño fijo */
     height: 45rem; /* Mantiene la proporción circular */
