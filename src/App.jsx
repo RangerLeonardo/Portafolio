@@ -15,7 +15,7 @@ function App() {
         {/* <SpanishOrEnglishContext> */}
           <Header />
           <Routes>
-            <Route path="/Portafolio" element={<SectionPrincipal />} />
+            <Route path="/Portafolio/" element={<SectionPrincipal />} />
             <Route path="/Portafolio/formulario_enviado" element={<SectionContactoExitoso />} />
           </Routes>
           <Footer />

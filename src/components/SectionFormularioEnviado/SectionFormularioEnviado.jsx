@@ -12,7 +12,7 @@ export const SectionFormularioEnviado = () => {
                 </div>
                 <div className='div_container_formulario_enviado_img'>
                     <div className='div_formulario_enviado_img animation_scale'>
-                        <NavLink to="/Portafolio">
+                        <NavLink to="/Portafolio/">
                             <img src="/Portafolio/img/logo/Logo.webp" alt="Logo, regreso a la página principal" />
                         </NavLink>
                     </div>
@@ -22,8 +22,9 @@ export const SectionFormularioEnviado = () => {
                         </a>
                     </div>
                     <div className='div_formulario_enviado_img animation_scale'>
-                        <a href="https://www.google.com"></a>
-                        <img src="/Portafolio/img/assets/google.jpg" alt="Ir a google" />
+                        <a href="https://www.google.com">
+                            <img src="/Portafolio/img/assets/google.jpg" alt="Ir a google" />
+                        </a>
                     </div>
                 </div>
             </div>
