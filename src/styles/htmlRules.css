@@ -48,7 +48,7 @@ body{
 } */
 
 main{
-  min-height: 83vh;
+  min-height: 100vh;
 }
 
 textarea {
@@ -135,11 +135,11 @@ body.light_mode header {
 }
 
 .section_default{
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section_default_secondary{
-  height: 100vh;
+  min-height: 100vh;
   background-color: var(--negro-secundario);
 }
 

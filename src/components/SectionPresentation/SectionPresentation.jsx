@@ -4,7 +4,7 @@ export const SectionPresentation = () => {
             <div className="div_contenido_principal">
 
                 <div className="myName">
-                    <h1>ADATA<br/>BARRERA<br/>LEONARDO</h1>
+                    <h1>ADATA<br/>BARRERA<br/>BRANDON<br/>LEONARDO</h1>
                 </div>
 
                 <div className="div_mi_foto">

@@ -44,4 +44,11 @@
 
 .div_mi_foto img{
   max-width: 90rem;
+  transition: opacity 0.5s ease;
+}
+
+.div_mi_foto img:hover{
+  opacity: 20%;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
 }

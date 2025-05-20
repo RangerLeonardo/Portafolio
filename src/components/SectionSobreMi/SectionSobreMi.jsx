@@ -26,7 +26,7 @@ export const SectionSobreMi = () => {
         setTimeout(() => {
             setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
             setIsFlipping(false);
-        }, 300); // Ajusta el tiempo para sincronizar con la animación
+        }, 300); 
     };
 
     const handleNext = () => {

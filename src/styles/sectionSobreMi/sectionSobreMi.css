@@ -1,10 +1,11 @@
 .section_sobre_mi{
-    height: 100vh;
+    min-height: 100vh;
     background-color: var(--negro-secundario);
 }
 
 .div_mis_hobbies{
     margin-top: 3rem;
+    margin-bottom: 2rem;
 }
 
 .div_sobre_mi{
