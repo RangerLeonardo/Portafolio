@@ -4,7 +4,7 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-padding-top: 15rem;
+  scroll-padding-top: 13.1rem;
 }*, *:before, *:after {
   box-sizing: inherit;
 }
@@ -68,10 +68,8 @@ h2,h3{
 }
 
 h4{
-  font-size: 4rem;
+  font-size: 3rem;
 }
-
-
 
 .div_generico {
   display: flex;
@@ -128,6 +126,7 @@ header{
   z-index: 1000; /* Asegura que esté sobre otros elementos */
   background-color: var(--negro-primario); /* Ajusta el color */
   padding: 1rem;
+  max-height: 13rem;
 }
 
 body.light_mode header {

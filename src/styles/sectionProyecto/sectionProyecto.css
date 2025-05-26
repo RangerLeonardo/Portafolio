@@ -1,0 +1,319 @@
+.project_card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.div_img_to_show {
+    background-color: #fff;
+    width: 95%;
+    height: 95%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.div_img_to_show img {
+    height: auto;
+    max-width: 80%;
+}
+
+.project_card ul li {
+    margin-bottom: 5px;
+    padding: 3px 8px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.project_card h3 {
+    text-align: center;
+    font-weight: bold;
+}
+
+.project_card ul li {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.section_proyectos {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: sans-serif;
+    overflow: hidden;
+    padding: 1rem;
+}
+
+/* === Contenedor Principal (Wrapper) === */
+.carousel_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    /* Para posicionar botones */
+}
+
+/* === Contenedor del Carrusel === */
+.carousel_container {
+    perspective: 1500px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 50px;
+    /* Espacio para botones */
+    box-sizing: border-box;
+}
+
+/* === Contenedor de las Tarjetas === */
+#cardContainer {
+    position: relative;
+    /* relative */
+    display: flex;
+    /* flex (para centrar contenido interno si fuera necesario) */
+    align-items: center;
+    /* items-center */
+    justify-content: center;
+    /* justify-center */
+    /* Tamaños responsivos */
+    width: 260px;
+    height: 400px;
+}
+
+/* === Estilos Base de la Tarjeta === */
+.card {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    transition: transform 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+        opacity 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+        background-color 0.6s cubic-bezier(0.25, 0.8, 0.25, 1),
+        filter 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+    backface-visibility: hidden;
+    will-change: transform, opacity, filter;
+}
+
+/* === Posiciones de las Tarjetas === */
+.card.left {
+    transform: translateX(-85%) scale(0.75);
+    opacity: 0.6;
+    z-index: 1;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    color: #374151;
+    /* Texto oscuro */
+    filter: blur(2px);
+}
+
+.card.center {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 10;
+    background-color: #ffffff;
+    /* Blanco */
+    color: #1f2937;
+    /* Gris oscuro */
+    filter: blur(0px);
+}
+
+.card.right {
+    transform: translateX(85%) scale(0.75);
+    opacity: 0.6;
+    z-index: 1;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    color: #374151;
+    /* Texto oscuro */
+    filter: blur(2px);
+}
+
+/* Ocultar tarjetas fuera de vista */
+.card:not(.left):not(.center):not(.right) {
+    transform: scale(0.5);
+    opacity: 0;
+    filter: blur(5px);
+    pointer-events: none;
+}
+
+/* === Placeholder de Imagen === */
+.image_placeholder {
+    grid-row: 1 / 2;
+    /* row-span-1 (ocupa la primera fila) */
+    width: 100%;
+    /* w-full */
+    height: 100%;
+    /* h-full */
+    background-color: #fff;
+    /* Verde */
+    /* border-bottom: 5px solid #f97316;  */
+    position: relative;
+    display: grid;
+    place-items: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+/* === Mockups de Pantalla === */
+.screen_mockup {
+    background-color: #e5e7eb;
+    border: 3px solid #4b5563;
+    border-radius: 0.25rem;
+    width: 70%;
+    height: 60%;
+    position: relative;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.screen_header {
+    background-color: var(--naranja-primario);
+    height: 10%;
+    border-bottom: 3px solid #4b5563;
+}
+
+.mobile_mockup {
+    background-color: #e5e7eb;
+    border: 3px solid #4b5563;
+    border-radius: 0.25rem;
+    width: 20%;
+    height: 45%;
+    position: absolute;
+    left: 5%;
+    bottom: 10%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mobile_header {
+    background-color: var(--naranja-primario);
+    height: 10%;
+    border-bottom: 3px solid #4b5563;
+}
+
+/* === Contenido de la Tarjeta === */
+.card_content {
+    grid-row: 2 / 3;
+    /* row-span-1 (ocupa la segunda fila) */
+    padding: 1rem;
+    /* p-4 */
+    overflow-y: auto;
+    /* overflow-y-auto */
+}
+
+.card_content h3 {
+    font-size: 1.125rem;
+    /* text-lg */
+    font-weight: 600;
+    /* font-semibold */
+    margin-bottom: 0.5rem;
+    /* mb-2 */
+}
+
+.card_content ul {
+    list-style: disc;
+    /* list-disc */
+    list-style-position: inside;
+    /* list-inside */
+    font-size: 0.875rem;
+    /* text-sm */
+}
+
+.card_content ul li {
+    margin-bottom: 0.25rem;
+    /* Equivalente aproximado de space-y-1 */
+}
+
+/* Simula space-y-1 (no es exacto pero visualmente similar) */
+.card_content ul li+li {
+    margin-top: 0.25rem;
+}
+
+.triangulo_right {
+    width: 0;
+    height: 0;
+
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    border-bottom: 1.5rem solid transparent;
+    border-left: 2.5rem solid var(--naranja-primario);
+    border-top: 1.5rem solid transparent;
+}
+
+.triangulo_left {
+    width: 0px;
+    height: 0px;
+
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    border-bottom: 1.5rem solid transparent;
+    border-right: 2.5rem solid var(--naranja-primario);
+    border-top: 1.5rem solid transparent;
+
+}
+
+/* === Media Queries para Responsividad === */
+
+/* sm: (640px y superior) */
+@media (min-width: 640px) {
+    #cardContainer {
+        width: 280px;
+        height: 420px;
+    }
+
+    .card_content {
+        padding: 1.5rem;
+        /* sm:p-6 */
+    }
+
+    .card_content h3 {
+        font-size: 1.25rem;
+        /* sm:text-xl */
+        margin-bottom: 1rem;
+        /* sm:mb-4 */
+    }
+
+    .card_content ul {
+        font-size: 1rem;
+        /* sm:text-base */
+    }
+
+    .nav-button svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* md: (768px y superior) */
+@media (min-width: 768px) {
+    #cardContainer {
+        width: 300px;
+        height: 450px;
+    }
+
+    /* Puedes añadir más ajustes específicos para md si son necesarios */
+}
+
+/* lg: (1024px y superior) */
+@media (min-width: 1024px) {
+    #cardContainer {
+        width: 320px;
+        height: 480px;
+    }
+
+    /* Puedes añadir más ajustes específicos para lg si son necesarios */
+}
