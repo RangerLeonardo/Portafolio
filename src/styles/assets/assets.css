@@ -46,6 +46,8 @@
 .div_container_cv_download:not(:hover) #img_download_nav {
     opacity: 0;
     transform: rotateX(0);
+    background-color: var(--naranja-primario);
+    transition: background-color 0.5s ease-in-out;
     animation: flip-horizontal-bottom-reverse 0.5s ease-in-out forwards;
 }
 
