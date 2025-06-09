@@ -1,28 +1,71 @@
-import {React, useState} from 'react'
+import {React, useState, useEffect} from 'react'
 import '../../styles/sectionContactame/formularioContactame.css'
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 export const FormularioContactame = () => {
+    const navigate = useNavigate();
+
     const [formData, setFormData] = useState({
         nombre: "",
         apellidos: "",
         asunto: "",
-        correo: "",
+        email: "",
         empresa: "",
         mensaje: ""
+    });
+
+    const [formStatus, setFormStatus] = useState({
+        message: '',
+        type: '', // 'success' o 'error'
     });
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        console.log("Datos enviados:", formData); // Simulación de envío
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+
+        setFormStatus({ message: 'Enviando mensaje...', type: '' }); // Resetear y mostrar "Enviando..."
+
+        try {
+            const vercelFunctionURL = 'https://vercel-function-email.vercel.app/api/send_email';
+
+            const response = await fetch(vercelFunctionURL, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                // Enviamos directamente el estado `formData` como JSON
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setFormStatus({
+                    message: '¡Mensaje enviado con éxito! Te responderé pronto.',
+                    type: 'success',
+                });
+                navigate('/Portafolio/formulario_enviado');
+            } else {
+                setFormStatus({
+                    message: `Error: ${result.message || 'Hubo un problema al enviar tu mensaje.'}`,
+                    type: 'error',
+                });
+            }
+        } catch (error) {
+            console.error('Error en la conexión o en el envío:', error);
+            setFormStatus({
+                message: 'Error de conexión. Por favor, inténtalo de nuevo más tarde.',
+                type: 'error',
+            });
+        }
     };
 
     return (
-        <form className="form_principal" onSubmit={handleSubmit}>
+        <form id='contact-form' className="form_principal" onSubmit={handleSubmit} method="POST">
             <fieldset className="fieldset_principal">
 
                 <div className="div_label_input">
@@ -69,7 +112,7 @@ export const FormularioContactame = () => {
                     <input 
                         className="input_form"
                         type="email"
-                        name="correo"
+                        name="email"
                         required
                         placeholder="Ingresa tu correo..."
                         value={formData.correo}
@@ -106,10 +149,16 @@ export const FormularioContactame = () => {
                 </div>
 
                 <div className="div_btn">
-                    <NavLink to={"/Portafolio/formulario_enviado"}>
+                    {/* <NavLink to={"/Portafolio/formulario_enviado"}> */}
                         <button type="submit" className="btn_enviar_formulario">ENVIAR</button>
-                    </NavLink>
+                    {/* </NavLink> */}
                 </div>
+
+                {formStatus.message && (
+                    <div id="form-status" className={formStatus.type}>
+                        {formStatus.message}
+                    </div>
+                )}
 
             </fieldset>
         </form>
