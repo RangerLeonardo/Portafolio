@@ -79,7 +79,6 @@ export const FormularioContactame = () => {
     }
 
     return (
-        // Cambiar handleTest por handleSubmit en el onSubmit del formulario
         <form id='contact-form' className="form_principal" onSubmit={handleSubmit} method="POST">
             <fieldset className="fieldset_principal">
 
