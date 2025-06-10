@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 export const FormularioContactame = () => {
     const navigate = useNavigate();
+    const [disableButton, setDisableButton] = useState(true);
 
     const [formData, setFormData] = useState({
         nombre: "",
@@ -22,6 +23,7 @@ export const FormularioContactame = () => {
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
+        verifyFormToEnableButton();
     };
 
     const handleSubmit = async (event) => {
@@ -48,6 +50,7 @@ export const FormularioContactame = () => {
                     message: '¡Mensaje enviado con éxito! Te responderé pronto.',
                     type: 'success',
                 });
+                setTimeToEnableButton(time);
                 navigate('/Portafolio/formulario_enviado');
             } else {
                 setFormStatus({
@@ -64,8 +67,26 @@ export const FormularioContactame = () => {
         }
     };
 
+    const handleTest = () => {
+        event.preventDefault();
+        console.log('Test function called');
+    }
+
+    const verifyFormToEnableButton = () => {
+        const isValid = (
+            formData.nombre.trim() !== '' &&
+            formData.apellidos.trim() !== '' &&
+            formData.asunto.trim() !== '' &&
+            formData.email.trim() !== '' &&
+            formData.mensaje.trim() !== ''
+        );
+        // Simplemente establece el estado directamente basado en el booleano 'isValid'
+        setDisableButton(!isValid); // Invierte para el 'disabled'
+    }
+
     return (
-        <form id='contact-form' className="form_principal" onSubmit={handleSubmit} method="POST">
+        // Cambiar handleTest por handleSubmit en el onSubmit del formulario
+        <form id='contact-form' className="form_principal" onSubmit={handleTest} /* method="POST" */>
             <fieldset className="fieldset_principal">
 
                 <div className="div_label_input">
@@ -148,10 +169,12 @@ export const FormularioContactame = () => {
                     />
                 </div>
 
+                <div>
+                    <input type="text" name='atack' className='unbelievable'/>
+                </div>
+
                 <div className="div_btn">
-                    {/* <NavLink to={"/Portafolio/formulario_enviado"}> */}
-                        <button type="submit" className="btn_enviar_formulario">ENVIAR</button>
-                    {/* </NavLink> */}
+                    <button type="submit" className="btn_enviar_formulario" disabled={disableButton}>ENVIAR</button>
                 </div>
 
                 {formStatus.message && (
