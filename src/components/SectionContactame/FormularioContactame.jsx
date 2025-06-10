@@ -67,11 +67,6 @@ export const FormularioContactame = () => {
         }
     };
 
-    const handleTest = () => {
-        event.preventDefault();
-        console.log('Test function called');
-    }
-
     const verifyFormToEnableButton = () => {
         const isValid = (
             formData.nombre.trim() !== '' &&
@@ -80,13 +75,12 @@ export const FormularioContactame = () => {
             formData.email.trim() !== '' &&
             formData.mensaje.trim() !== ''
         );
-        // Simplemente establece el estado directamente basado en el booleano 'isValid'
-        setDisableButton(!isValid); // Invierte para el 'disabled'
+        setDisableButton(!isValid);
     }
 
     return (
         // Cambiar handleTest por handleSubmit en el onSubmit del formulario
-        <form id='contact-form' className="form_principal" onSubmit={handleTest} /* method="POST" */>
+        <form id='contact-form' className="form_principal" onSubmit={handleSubmit} method="POST">
             <fieldset className="fieldset_principal">
 
                 <div className="div_label_input">
