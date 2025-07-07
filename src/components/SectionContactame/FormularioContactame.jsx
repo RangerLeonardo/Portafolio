@@ -13,7 +13,8 @@ export const FormularioContactame = () => {
         asunto: "",
         email: "",
         empresa: "",
-        mensaje: ""
+        mensaje: "",
+        atack: "", // Campo oculto para detectar bots
     });
 
     const [formStatus, setFormStatus] = useState({
@@ -64,6 +65,8 @@ export const FormularioContactame = () => {
                 message: 'Error de conexión. Por favor, inténtalo de nuevo más tarde.',
                 type: 'error',
             });
+        } /* quitar esto para subir */finally{
+            navigate('/Portafolio/formulario_enviado');
         }
     };
 
