@@ -52,11 +52,14 @@ export const SectionSobreMi = () => {
                     <div className='div_sobre_mi_texto_info'>
                         <h4>"El maestro se ha equivocado más veces de lo que el estudiante lo ha intentado."</h4>
                         <p>Soy un desarrollador web apasionado por crear experiencias digitales funcionales y atractivas.
-                            Me especializo en transformar ideas en proyectos sólidos mediante tecnologías modernas.
-                            <br />
-                            <br />
+                            Me especializo en transformar ideas en proyectos sólidos mediante tecnologías modernas.</p>
+                        <p>
                             Mi enfoque se centra en la eficiencia, el diseño intuitivo y la optimización del rendimiento. 
-                            Tengo experiencia en tecnologías como Java, Spring framework, React JS y CSS avanzado para desarrollar interfaces dinámicas.
+                            Tengo experiencia en tecnologías como Java, Spring framework, React.JS y CSS avanzado para desarrollar interfaces dinámicas.
+                        </p>
+                        <p>
+                            Siempre busco la forma de ahorrar costos y tiempo en todo lo que hago, puedes tener la seguridad de que tu proyecto
+                            será óptimo y eficiente.
                         </p>
                     </div>
                 </div>

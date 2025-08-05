@@ -1,6 +1,5 @@
 import {React, useState, useEffect} from 'react'
 import '../../styles/sectionContactame/formularioContactame.css'
-// import { NavLink } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 export const FormularioContactame = () => {
@@ -51,7 +50,6 @@ export const FormularioContactame = () => {
                     message: '¡Mensaje enviado con éxito! Te responderé pronto.',
                     type: 'success',
                 });
-                setTimeToEnableButton(time);
                 navigate('/Portafolio/formulario_enviado');
             } else {
                 setFormStatus({

@@ -16,13 +16,16 @@ html {
   --blanco-primario: #FFF;
   --blanco-secundario: #F0F0F0;
   --sombra-primaria: #9a9a9a;
-
+  --sombra-secundaria:rgba(0, 0, 0, 0.05);
+  --negro-letras-card: #1e1e1e;
+  --blanco-card: #FFF;
 }
 
 .light_mode{
   --negro-primario: #fefefe;
   --negro-secundario: #f1f1f1;
   --blanco-primario: #1e1e1e;
+  --sombra-secundaria: #f3f3f3;
 }
 
 body{

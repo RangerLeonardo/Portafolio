@@ -1,23 +1,20 @@
-import React from 'react'
 import ImgDefault from '../Assets/ImgDefault';
 
 
 export const CardProyecto = ({cardItem}) => {
     const technologies = cardItem.technologies;
-    const imgData = cardItem.imgData;
     const positionClass = cardItem.position || "hidden";
     return (
         <div className={`card ${positionClass}`}>
             {/* IMG  */}
             <div className='image_placeholder'>
-                <div className='div_img_to_show'>
-                    {imgData.map((data, index)=>{
-                        return <ImgDefault key={index} 
-                            src={data.src} 
-                            title={data.title} 
-                            alt={data.alt}
-                            className={data.className}/>
-                    })}
+                <div className='div_img_to_show image-container-test'>
+                        <ImgDefault
+                            src={cardItem.imgData.src} 
+                            title={cardItem.imgData.title} 
+                            alt={cardItem.imgData.alt}
+                            className={cardItem.imgData.className}/>
+
                 </div>
             </div>
             {/* Content */}
@@ -31,6 +28,9 @@ export const CardProyecto = ({cardItem}) => {
                             return <li key={index}>{tech}</li>
                         })}
                     </ul>
+                </div>
+                <div className='div_link_card_project'>
+                    <a href={cardItem.urlToGitHub} target='_blank'>Ver proyecto</a>
                 </div>
             </div>
         </div>

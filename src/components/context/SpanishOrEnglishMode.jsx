@@ -3,10 +3,10 @@ import { createContext, useState } from "react";
 export const SpanishOrEnglishContext = createContext();
 
 export const SpanishOrEnglishMode = ({ children }) => {
-    const [isSpanishMode, setIsSpanishMode] = useState(false); // Estado para modo Espanol
+    const [isSpanishMode, setIsSpanishMode] = useState(true);
 
     const toggleLanguage = () => {
-        setIsSpanishMode(prevMode => !prevMode); // Alternar entre modo luz y oscuro
+        setIsSpanishMode(prevMode => !prevMode);
     };
 
     return (

@@ -2,8 +2,6 @@ import { createContext, useState, useEffect } from "react";
 
 export const DarkOrLightContext = createContext();
 
-
-
 export const DarkOrLightMode = ({ children }) => {
     const [isLightMode, setIsLightMode] = useState(false); // Estado para modo luz
 

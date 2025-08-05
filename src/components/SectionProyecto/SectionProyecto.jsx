@@ -39,22 +39,24 @@ export const SectionProyecto = () => {
 
     return (
         <SectionDefault sectionId={"smooth_proyecto"} title={"Proyectos"}>
-            <div className='section_proyectos'>
-                <div className='carousel_wrapper'>
-                    <div>
-                        <button className="triangulo_left animation_scale left" onClick={prevCard} title="Anterior" type='button'></button>
-                    </div>
-
-                    <div className="carousel_container">
-                        <div id="cardContainer">
-                            {cards.map((card, index) => {
-                                return <CardProyecto cardItem={card} key={index} />
-                            })}
+            <div className='section_proyecto_container'>
+                <div className='section_proyecto'>
+                    <div className='carousel_wrapper'>
+                        <div>
+                            <button className="triangulo_left animation_scale left" onClick={prevCard} title="Anterior" type='button'></button>
                         </div>
-                    </div>
 
-                    <div>
-                        <button className="triangulo_right animation_scale right" onClick={nextCard} title="Siguiente" type='button'></button>
+                        <div className="carousel_container">
+                            <div id="cardContainer">
+                                {cards.map((card, index) => {
+                                    return <CardProyecto cardItem={card} key={index} />
+                                })}
+                            </div>
+                        </div>
+
+                        <div>
+                            <button className="triangulo_right animation_scale right" onClick={nextCard} title="Siguiente" type='button'></button>
+                        </div>
                     </div>
                 </div>
             </div>
