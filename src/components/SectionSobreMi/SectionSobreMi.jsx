@@ -59,7 +59,7 @@ export const SectionSobreMi = () => {
                         </p>
                         <p>
                             Siempre busco la forma de ahorrar costos y tiempo en todo lo que hago, puedes tener la seguridad de que tu proyecto
-                            será óptimo y eficiente.
+                            será óptimo y eficiente, toda de ejemplo el formulario allá abajo, se usó un proceso para enviar emails dónde todo su uso no genera costos.
                         </p>
                     </div>
                 </div>

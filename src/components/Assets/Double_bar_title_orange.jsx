@@ -1,5 +1,3 @@
-import React from 'react'
-
 export const Double_bar_title_orange = ({title}) => {
     return (
         <div>

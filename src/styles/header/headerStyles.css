@@ -1,8 +1,10 @@
 /* Header start */
 .navegacion_principal {
-    display: flex;
+    display: grid;
+    grid-template-columns: 20% 80%;
     margin-top: 1.6rem;
     margin-bottom: 1rem;
+    max-height: 7rem;
 }
 
 .navegacion_div {
@@ -26,6 +28,8 @@
 }
 
 #logo {
+    height: auto;
+    max-height: 5rem;
     max-width: 6.5rem;
     margin-top: -.5rem;
 }
@@ -41,4 +45,60 @@
     font-size: 1.8rem;
 }
 
+.navegacion_div_menu{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.navegacion_div_hamburger_icon{
+    display: none;
+}
+
 /* header end */
+
+/* Movil */
+@media (max-width: 480px) {
+
+    .navegacion_principal{
+        
+    }
+
+    .navegacion_div_menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        grid-column-start: 1;
+        grid-column-end:3;
+        background-color: gray;
+        margin-top: -.5rem;
+        height: 100%;
+        width: 100%;
+    }
+
+    .nav_close_menu {
+        display: none;
+    }
+    .nav_open_menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navegacion_div_hamburger_icon{
+        display: flex;
+        align-items: center;
+        justify-content: right;
+        margin-right: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .navegacion_hamburger_icon{
+        display: block; /* Muestra el botón */
+        background: none;
+        border: none;
+        font-size: 4rem;
+        color: var(--text-color);
+    }
+}

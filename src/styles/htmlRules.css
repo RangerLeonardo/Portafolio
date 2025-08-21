@@ -4,10 +4,11 @@ html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
-  scroll-padding-top: 13.1rem;
+  scroll-padding-top: 11rem;
 }*, *:before, *:after {
   box-sizing: inherit;
 }
+
 :root {
   --naranja-primario: #f35c3a;
   --naranja-secundario: #fd4f28;
@@ -51,7 +52,7 @@ body{
 } */
 
 main{
-  min-height: 100vh;
+  min-height: calc(100vh - 8rem);
 }
 
 textarea {
@@ -129,7 +130,25 @@ header{
   z-index: 1000; /* Asegura que esté sobre otros elementos */
   background-color: var(--negro-primario); /* Ajusta el color */
   padding: 1rem;
-  max-height: 13rem;
+  max-height: 11rem;
+  width: 100%;
+}
+
+@media (max-width: 480px) {
+  html {
+    scroll-padding-top: 0rem;
+  }
+  
+  header{
+    position: sticky;
+    top: 0; /* Se pegará en la parte superior */
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    background-color: var(--negro-primario); /* Ajusta el color */
+    padding: 1rem;
+    max-height: 11rem;
+    width: 100%;
+  }
+  
 }
 
 body.light_mode header {

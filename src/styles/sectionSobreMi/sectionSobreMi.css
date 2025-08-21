@@ -72,3 +72,13 @@
     filter: invert(100%);
 }
 
+/* MEDIA QUERIES PARA MOVILES Y TABLETS GRANDES */
+@media (max-width: 767px) {
+
+}
+/* Movil */
+@media (max-width: 480px) {
+    .div_sobre_mi{
+        grid-template-columns: 1fr;
+    }
+}
