@@ -9,6 +9,10 @@ html {
   box-sizing: inherit;
 }
 
+/* * {
+  outline: 1px solid red;
+} */
+
 :root {
   --naranja-primario: #f35c3a;
   --naranja-secundario: #fd4f28;
@@ -63,7 +67,7 @@ a{
 }
 
 h1{
-  font-size: 10rem; 
+  font-size: 10rem;
 }
 
 h2,h3{

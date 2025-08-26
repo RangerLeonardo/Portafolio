@@ -81,4 +81,34 @@
     .div_sobre_mi{
         grid-template-columns: 1fr;
     }
+
+    .div_sobre_mi_texto_info h4{
+        font-size: 2rem;
+        white-space: wrap;
+    }
+
+    .div_hobbies_img img{
+        width: 60%;
+        height: 60%;
+    }
+
+
+    .div_hobbies_img_border{
+        width: 35rem; /* Ajusta a un tamaño fijo */
+        height: 35rem; /* Mantiene la proporción circular */
+    }
+}
+
+/* Movil */
+@media (max-width: 280px) {
+    .div_hobbies_img img{
+        width: 60%;
+        height: 60%;
+    }
+
+
+    .div_hobbies_img_border{
+        width: 25rem; /* Ajusta a un tamaño fijo */
+        height: 25rem; /* Mantiene la proporción circular */
+    }
 }

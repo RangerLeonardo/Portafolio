@@ -55,11 +55,39 @@
 
 /* Movil */
 @media (max-width: 480px) {
+
+  .div_contenido_principal{
+    grid-template-rows: 20% 80%;
+    grid-template-columns: 50% 50%;
+  }
+
+  .div_info_principal{
+    grid-row-start: 1;
+    grid-column-start:1;
+    grid-column-end: 3;
+  }
+
+  .info_p{
+    display: none;
+  }
+
+  .div_mi_foto{
+    grid-row-start: 2;
+    margin-left: -7rem;
+  }
+
+  .myName{
+    grid-row-start: 2;
+    margin-left: -1rem;
+  }
+
   .div_mi_foto img{
-    width: 30rem;
+    width: 25rem;
   }
 
   .myName h1{
-    font-size: 7rem;
+    font-size: 5rem;
   }
 }
+
+

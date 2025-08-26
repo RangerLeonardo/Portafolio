@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Header } from "./components/Header/Header";
-import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/header/Header";
+import { Footer } from "./components/footer/Footer";
 import { SectionPrincipal } from "./components/SectionPrincipal/SectionPrincipal";
 import SectionContactoExitoso from "./components/SectionFormularioEnviado/SectionFormularioEnviado";
 import DarkOrLightMode from "./components/context/DarkOrLightMode";

@@ -2,7 +2,7 @@ import { React, useState, useEffect } from 'react';
 import '../../styles/sectionProyecto/sectionProyecto.css'
 import SectionDefault from '../CustomSection/SectionDefault'
 import CardData from '../../DB/CardData/CardData';
-import CardProyecto from './cardProyecto';
+import CardProyecto from './CardProyecto';
 
 export const SectionProyecto = () => {
     const [currentCenterIndex, setCurrentCenterIndex] = useState(0);
